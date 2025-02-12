@@ -1,0 +1,115 @@
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+
+const Navbar = () => {
+
+    const links = (
+        <>
+            <NavLink
+                to="/"
+                end
+                className={({ isActive }) =>
+                    
+                    `bg-white border px-2 rounded-xl flex items-center py-2 ${
+                        isActive ? '!bg-sky-100' : 'hover:bg-sky-100'
+                    }`
+                }
+            >
+                Home
+            </NavLink>
+            <NavLink
+                to="/"
+                className={({ isActive }) =>
+                    `bg-white border px-2 rounded-xl flex items-center py-2 ${
+                        isActive ? '!bg-sky-100' : 'hover:bg-sky-100'
+                    }`
+                }
+            >
+                All Foods
+            </NavLink>
+            <NavLink
+                to="/"
+                className={({ isActive }) =>
+                    `bg-white border px-2 rounded-xl flex items-center py-2 ${
+                        isActive ? '!bg-sky-100' : 'hover:bg-sky-100'
+                    }`
+                }
+            >
+                Gallery
+            </NavLink>
+            <NavLink
+                to="/"
+                className={({ isActive }) =>
+                    `bg-white border px-2 rounded-xl flex items-center py-2 ${
+                        isActive ? '!bg-sky-100' : 'hover:bg-sky-100'
+                    }`
+                }
+            >
+                Contact
+            </NavLink>
+            <NavLink
+                to="/"
+                className={({ isActive }) =>
+                    `bg-white border px-2 rounded-xl flex items-center py-2 ${
+                        isActive ? '!bg-sky-100' : 'hover:bg-sky-100'
+                    }`
+                }
+            >
+                Shop
+            </NavLink>
+        </>
+    );
+    
+    return (
+        <div>
+        <div className="navbar shadow">
+        <div className="navbar-start">
+            <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
+            </div>
+            <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                {links}
+            </ul>
+            </div>
+            <a className="btn btn-ghost text-2xl">ByteBistro</a>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+            <ul className="menu menu-horizontal px-1 flex gap-3">
+                {links}
+            </ul>
+        </div>
+        <div className="navbar-end flex gap-3 mr-5">
+            <Link to='/register'><button className="btn">Register</button></Link>
+            <Link to='/signin'><button className="btn">Sign In</button></Link>
+
+            <div className="dropdown dropdown-bottom dropdown-end" >
+                {/* <div tabIndex={0} role="button" className="btn  m-1"><img src="https://i.ibb.co.com/vH1ySpZ/ezgif-2-9828453b56.jpg" alt="" /></div> */}
+                <img tabIndex={0} role='button' className='w-14 h-14 rounded-full' src="https://i.ibb.co.com/vH1ySpZ/ezgif-2-9828453b56.jpg" alt="" />
+                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-[130px] p-2 shadow">
+                    <Link to='/'><button className="btn w-full">My Foods</button></Link>
+                    <Link to='/'><button className="btn w-full">Add food</button></Link>
+                    <Link to='/'><button className="btn w-full">My Orders</button></Link>
+                </ul>
+            </div>
+
+        </div>
+        </div>
+        </div>
+    );
+};
+
+export default Navbar;
