@@ -38,20 +38,20 @@ const Navbar = () => {
                 Gallery
             </NavLink>
             <NavLink
-                to="/"
+                to="/contact"
                 className={({ isActive }) =>
                     `bg-white border px-2 rounded-xl flex items-center py-2 ${
-                        isActive ? '!bg-sky-100' : 'hover:bg-sky-100'
+                        isActive ? '!bg-yellow-100' : 'hover:bg-yellow-100'
                     }`
                 }
             >
                 Contact
             </NavLink>
             <NavLink
-                to="/"
+                to="/shop"
                 className={({ isActive }) =>
                     `bg-white border px-2 rounded-xl flex items-center py-2 ${
-                        isActive ? '!bg-sky-100' : 'hover:bg-sky-100'
+                        isActive ? '!bg-yellow-100' : 'hover:bg-yellow-100'
                     }`
                 }
             >
@@ -85,7 +85,10 @@ const Navbar = () => {
                 {links}
             </ul>
             </div>
-            <a className="btn btn-ghost text-2xl">ByteBistro</a>
+            <div className='flex items-center'>
+                <img className='w-12 h-12' src="/src/assets/burger.gif" alt="" />
+                <p className="text-2xl font-semibold">ByteBistro</p>
+            </div>
         </div>
         <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 flex gap-3">
