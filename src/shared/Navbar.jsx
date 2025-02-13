@@ -28,10 +28,10 @@ const Navbar = () => {
                 All Foods
             </NavLink>
             <NavLink
-                to="/"
+                to="/gallery"
                 className={({ isActive }) =>
                     `bg-white border px-2 rounded-xl flex items-center py-2 ${
-                        isActive ? '!bg-sky-100' : 'hover:bg-sky-100'
+                        isActive ? '!bg-yellow-100' : 'hover:bg-yellow-100'
                     }`
                 }
             >

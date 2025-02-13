@@ -65,7 +65,7 @@ const Shop = () => {
                     </div>
 
                     <div className='w-[270px] p-[30px] flex flex-col gap-5 bg-[#F9FAFC]'>
-                        <img className='h-[270px]' src="/src/assets/chef/chef2-.jpg" alt="" />
+                        <img className='h-[270px]' src="/src/assets/chef/chef-3.jpg" alt="" />
                         <div className='flex flex-col items-center gap-5'>
                             <h1 className='text-xl font-bold'>Paul Trueman</h1>
                             <p className='font-semibold text-stone-400'>Chef</p>
@@ -78,7 +78,7 @@ const Shop = () => {
                     </div>
 
                     <div className='w-[270px] p-[30px] flex flex-col gap-5 bg-[#F9FAFC]'>
-                        <img className='h-[270px]' src="/src/assets/chef/chef2-.jpg" alt="" />
+                        <img className='h-[270px]' src="/src/assets/chef/chef-4.jpg" alt="" />
                         <div className='flex flex-col items-center gap-5'>
                             <h1 className='text-xl font-bold'>Paul Trueman</h1>
                             <p className='font-semibold text-stone-400'>Chef</p>
@@ -91,7 +91,7 @@ const Shop = () => {
                     </div>
 
                     <div className='w-[270px] p-[30px] flex flex-col gap-5 bg-[#F9FAFC]'>
-                        <img className='h-[270px]' src="/src/assets/chef/chef2-.jpg" alt="" />
+                        <img className='h-[270px]' src="/src/assets/chef/chef-5.jpg" alt="" />
                         <div className='flex flex-col items-center gap-5'>
                             <h1 className='text-xl font-bold'>Paul Trueman</h1>
                             <p className='font-semibold text-stone-400'>Chef</p>
