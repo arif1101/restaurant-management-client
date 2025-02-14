@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import AuthContext from '../context/AuthContext';
 
 const Navbar = () => {
+
+    const {user, signOutUser} = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        signOutUser()
+        .then(() => {
+            console.log('successful sign out')
+        })
+        .catch(error => {
+            console.log('failed to sign out .stay here. dont leave me alone')
+        })
+    }
 
     const links = (
         <>
@@ -96,11 +109,20 @@ const Navbar = () => {
             </ul>
         </div>
         <div className="navbar-end flex gap-3 mr-5">
-            <Link to='/register'><button className="btn">Register</button></Link>
-            <Link to='/login'><button className="btn">Sign In</button></Link>
+
+            {
+                user?<>
+                    <button onClick={handleSignOut} className="btn">Sign out</button>
+                </> : <>
+                    <Link to='/register'><button className="btn">Register</button></Link>
+                    <Link to='/login'><button className="btn">Sign In</button></Link>
+                </>
+            }
+
 
             <div className="dropdown dropdown-bottom dropdown-end" >
                 {/* <div tabIndex={0} role="button" className="btn  m-1"><img src="https://i.ibb.co.com/vH1ySpZ/ezgif-2-9828453b56.jpg" alt="" /></div> */}
+                <p className='font-bold text-yellow-700'>{user?.displayName}</p>
                 <img tabIndex={0} role='button' className='w-14 h-14 rounded-full' src="https://i.ibb.co.com/vH1ySpZ/ezgif-2-9828453b56.jpg" alt="" />
                 <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-[130px] p-2 shadow">
                     <Link to='/'><button className="btn w-full">My Foods</button></Link>
