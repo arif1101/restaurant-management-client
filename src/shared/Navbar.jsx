@@ -11,17 +11,17 @@ const Navbar = () => {
                 className={({ isActive }) =>
                     
                     `bg-white border px-2 rounded-xl flex items-center py-2 ${
-                        isActive ? '!bg-sky-100' : 'hover:bg-sky-100'
+                        isActive ? '!bg-yellow-100' : 'hover:bg-yellow-100'
                     }`
                 }
             >
                 Home
             </NavLink>
             <NavLink
-                to="/"
+                to="/foods"
                 className={({ isActive }) =>
                     `bg-white border px-2 rounded-xl flex items-center py-2 ${
-                        isActive ? '!bg-sky-100' : 'hover:bg-sky-100'
+                        isActive ? '!bg-yellow-100' : 'hover:bg-yellow-100'
                     }`
                 }
             >
@@ -97,7 +97,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end flex gap-3 mr-5">
             <Link to='/register'><button className="btn">Register</button></Link>
-            <Link to='/signin'><button className="btn">Sign In</button></Link>
+            <Link to='/login'><button className="btn">Sign In</button></Link>
 
             <div className="dropdown dropdown-bottom dropdown-end" >
                 {/* <div tabIndex={0} role="button" className="btn  m-1"><img src="https://i.ibb.co.com/vH1ySpZ/ezgif-2-9828453b56.jpg" alt="" /></div> */}

@@ -7,6 +7,9 @@ import Home from "../pages/Home/Home";
 import Contact from "../pages/Contact/Contact";
 import Shop from "../pages/Shop/shop";
 import Gallery from "../pages/Gallery/Gallery";
+import Register from "../pages/Register/Register";
+import Login from "../pages/Login/Login";
+import Foods from "../pages/Foods/Foods";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +19,10 @@ const router = createBrowserRouter([
         {
           path: '/',
           element:<Home></Home>
+        },
+        {
+          path: '/foods',
+          element: <Foods></Foods>
         },
         {
           path: '/contact',
@@ -28,6 +35,14 @@ const router = createBrowserRouter([
         {
           path: '/gallery',
           element: <Gallery></Gallery>
+        },
+        {
+          path: '/login',
+          element: <Login></Login>
+        },
+        {
+          path: '/register',
+          element: <Register></Register>
         }
       ]
     },

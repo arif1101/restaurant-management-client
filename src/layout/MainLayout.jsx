@@ -4,13 +4,18 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../shared/Footer';
 
 const MainLayout = () => {
-    return (
+    return <>
         <div className='max-w-[1200px] mx-auto'>
             <Navbar></Navbar>
             <Outlet></Outlet>
-            <Footer></Footer>
+            
         </div>
-    );
+        <div className='border-t'>
+        <Footer></Footer>
+        </div>
+        
+        
+        </>
 };
 
 export default MainLayout;
