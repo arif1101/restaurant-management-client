@@ -74,9 +74,8 @@ const Navbar = () => {
     );
     
     return (
-        <div>
         <div className="navbar shadow">
-        <div className="navbar-start">
+        <div className="navbar-start h-[80px]">
             <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                 <svg
@@ -127,11 +126,10 @@ const Navbar = () => {
                 <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-[130px] p-2 shadow">
                     <Link to='/'><button className="btn w-full">My Foods</button></Link>
                     <Link to='/'><button className="btn w-full">Add food</button></Link>
-                    <Link to='/'><button className="btn w-full">My Orders</button></Link>
+                    <Link to='/myOrders'><button className="btn w-full">My Orders</button></Link>
                 </ul>
             </div>
 
-        </div>
         </div>
         </div>
     );
