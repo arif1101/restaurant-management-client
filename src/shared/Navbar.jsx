@@ -99,7 +99,7 @@ const Navbar = () => {
             </div>
             <div className='flex items-center'>
                 <img className='w-12 h-12' src="/burger.gif" alt="" />
-                <p className="text-2xl font-semibold">ByteBistro</p>
+                <p className="text-2xl font-semibold">B<span className='text-yellow-600'>yte</span>B<span className='text-yellow-600'>istro</span></p>
             </div>
         </div>
         <div className="navbar-center hidden lg:flex">

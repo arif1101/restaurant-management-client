@@ -26,68 +26,68 @@ const AddFood = () => {
     
     
     return (
-        <div>
-            <form onSubmit={handleAddFood} className="">
+        <div className='bg-[#F9FAFC] py-4'>
+            <form onSubmit={handleAddFood} className=" w-[700px] mx-auto">
                 {/* 1 foodName */}
                 <div className="form-control">
                 <label className="label">
-                    <span className="label-text">Name</span>
+                    <span className="label-text font-bold">Name</span>
                 </label>
                 <input type="name" name='foodName' placeholder="name" className="input input-bordered" required />
                 </div>
                 {/* 2 foodPhoto */}
                 <div className="form-control">
                 <label className="label">
-                    <span className="label-text">food image</span>
+                    <span className="label-text font-bold">Food image</span>
                 </label>
                 <input type="URL" name='foodImage' placeholder="food image" className="input input-bordered" required />
                 </div>
                 {/* 3 foodCategory */}
                 <div className="form-control">
                 <label className="label">
-                    <span className="label-text">food category</span>
+                    <span className="label-text font-bold">Food category</span>
                 </label>
                 <input type="text" name='foodCategory' placeholder="food category" className="input input-bordered" required />
                 </div>
                 {/* 4 quantity */}
                 <div className="form-control">
                 <label className="label">
-                    <span className="label-text">Quantity</span>
+                    <span className="label-text font-bold">Quantity</span>
                 </label>
                 <input type="text" name='quantity' placeholder="quantity" className="input input-bordered" required />
                 </div>
                 {/* 5 price */}
                 <div className="form-control">
                 <label className="label">
-                    <span className="label-text">Price</span>
+                    <span className="label-text font-bold">Price</span>
                 </label>
                 <input type="text" name='price' placeholder="price" className="input input-bordered" required />
                 </div>
                 {/* 6 email */}
                 <div className="form-control">
                 <label className="label">
-                    <span className="label-text">Email</span>
+                    <span className="label-text font-bold">Email</span>
                 </label>
                 <input type="email" name='addedByEmail' placeholder={user.email} className="input input-bordered" required />
                 </div>
                 {/* 7 description */}
                 <div className="form-control">
                 <label className="label">
-                    <span className="label-text">Description</span>
+                    <span className="label-text font-bold">Description</span>
                 </label>
                 <input type="text" name='description' placeholder="sort description" className="input input-bordered" required />
                 </div>
                 {/* 8 add by name */}
                 <div className="form-control">
                 <label className="label">
-                    <span className="label-text">Add by </span>
+                    <span className="label-text font-bold">Add by </span>
                 </label>
                 <input type="text" name='addedByName' placeholder="Add by name" className="input input-bordered" required />
                 </div>
                 {/* 9 food origin */}
                 <div className="form-control">
                 <label className="label">
-                    <span className="label-text">Food origin</span>
+                    <span className="label-text font-bold">Food origin</span>
                 </label>
                 <input type="text" name='foodOrigin' placeholder="food origin" className="input input-bordered" required />
                 </div>
@@ -95,13 +95,13 @@ const AddFood = () => {
                 {/* 10 rating */}
                 <div className="form-control">
                 <label className="label">
-                    <span className="label-text">Rating</span>
+                    <span className="label-text font-bold">Rating</span>
                 </label>
                 <input type="number" name='rating' placeholder="rating" className="input input-bordered" required />
                 </div>
 
                 <div className="form-control mt-6">
-                <button className="btn bg-yellow-300 hover:bg-yellow-300">Add food</button>
+                <button className="btn bg-yellow-300 hover:bg-yellow-300 font-bold">Add food</button>
                 </div>
             </form>
         </div>
