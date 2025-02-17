@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 
 const images = [
-  { src: "/src/assets/food/food-1.jpg" },
-  { src: "/src/assets/food/food-2.jpg" },
-  { src: "/src/assets/food/food-3.jpg" },
-  { src: "/src/assets/food/food-4.jpg" },
-  { src: "/src/assets/food/food-5.jpg" },
-  { src: "/src/assets/food/food-6.jpg" },
-  { src: "/src/assets/food/food-7.jpg" },
-  { src: "/src/assets/food/food-8.jpg" },
-  { src: "/src/assets/food/food-9.jpg" },
-  { src: "/src/assets/food/food-10.jpg" },
+  { src: "/food/food-1.jpg" },
+  { src: "/food/food-2.jpg" },
+  { src: "/food/food-3.jpg" },
+  { src: "/food/food-4.jpg" },
+  { src: "/food/food-5.jpg" },
+  { src: "/food/food-6.jpg" },
+  { src: "/food/food-7.jpg" },
+  { src: "/food/food-8.jpg" },
+  { src: "/food/food-9.jpg" },
+  { src: "/food/food-10.jpg" },
 ];
+
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);

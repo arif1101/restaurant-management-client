@@ -98,7 +98,7 @@ const Navbar = () => {
             </ul>
             </div>
             <div className='flex items-center'>
-                <img className='w-12 h-12' src="/src/assets/burger.gif" alt="" />
+                <img className='w-12 h-12' src="/burger.gif" alt="" />
                 <p className="text-2xl font-semibold">ByteBistro</p>
             </div>
         </div>
@@ -122,8 +122,8 @@ const Navbar = () => {
             <div className="dropdown dropdown-bottom dropdown-end" >
                 {/* <div tabIndex={0} role="button" className="btn  m-1"><img src="https://i.ibb.co.com/vH1ySpZ/ezgif-2-9828453b56.jpg" alt="" /></div> */}
                 {/* <p className='font-bold text-yellow-700'>{user?.displayName}</p> */}
-                <img tabIndex={0} role='button' className='w-14 h-14 rounded-full shadow border border-green-400' src={user.photoURL} alt="" />
-                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-[130px] p-2 shadow">
+                <img tabIndex={0} role='button' className='w-14 h-14 rounded-full border-2 border-red-300' src={user?.photoURL} alt="" />
+                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1000] w-[130px] p-2 shadow">
                     <Link to='/myFoods'><button className="btn w-full">My Foods</button></Link>
                     <Link to='/addFood'><button className="btn w-full">Add food</button></Link>
                     <Link to='/myOrders'><button className="btn w-full">My Orders</button></Link>

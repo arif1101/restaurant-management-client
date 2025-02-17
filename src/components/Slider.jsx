@@ -6,12 +6,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const images = [
-  "/src/assets/food/slider-1.jpg",
-  "/src/assets/food/slider-2.jpg",
-  "/src/assets/food/slider-3.jpg",
-  "/src/assets/food/slider-4.jpg",
-  "/src/assets/food/slider-1.jpg",
-  "/src/assets/food/slider-3.jpg",
+  "/slider-1.jpg",
+  "/slider-2.jpg",
+  "/slider-3.jpg",
+  "/slider-4.jpg",
+  "/slider-1.jpg",
+  "/slider-3.jpg",
 ];
 
 const GalleryCarousel = () => {
