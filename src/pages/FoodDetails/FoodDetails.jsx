@@ -99,7 +99,7 @@ const FoodDetails = () => {
                 <p>{description}</p>
                 {/* price  */}
                 <div className='flex gap-[32px]'>
-                    <p className='text-green-500 font-bold text-xl'>{price}</p>
+                    <p className='text-green-500 font-bold text-xl'><span className='text-black text-lg'>Price : </span>{price}</p>
                     <p className='text-red-500 line-through text-xl font-bold'>{(price + 5).toFixed(2)}</p>
                 </div>
                 {/* quantity */}

@@ -36,7 +36,7 @@ const MyOrders = () => {
                         ) : (
                             foods.map((food, index) => (
                                 <tr 
-                                    key={food.id} 
+                                    key={index} 
                                     className={`border-b ${
                                         index % 2 === 0 ? 'bg-gray-100' : 'bg-white'
                                     } hover:bg-gray-200 transition duration-200`}

@@ -1,15 +1,21 @@
 import React, { useContext } from 'react';
 import AuthContext from '../../context/AuthContext';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const AddFood = () => {
 
     const {user} = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const handleAddFood = e => {
         e.preventDefault();
         const formData = new FormData(e.target);
         const newFood = Object.fromEntries(formData.entries());
-        console.log(newFood)
+
+        newFood.quantity = parseInt(newFood.quantity, 10);
+        newFood.price = parseFloat(newFood.price);
+        newFood.rating = parseFloat(newFood.rating);
 
         fetch('http://localhost:5000/foods', {
             method: 'POST',
@@ -20,7 +26,14 @@ const AddFood = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            if (data.insertedId) {
+                Swal.fire({
+                  title: "Successfully Added Food",
+                  icon: "success",
+                  draggable: true
+                });
+                navigate('/myFoods')
+            }
         })
     }
     

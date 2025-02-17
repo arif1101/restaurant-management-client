@@ -4,7 +4,7 @@ const Experiense = () => {
     return (
         <div className='flex py-[15px] justify-between bg-[#F9FAFC] px-[15px] mt-[100px] rounded-3xl mb-[74px]'>
             <div className='relative'>
-                <img className='max-w-[456px] h-[620px] rounded-3xl' src="/public/experiense.jpg" alt="" />
+                <img className='max-w-[456px] h-[620px] rounded-3xl' src="/experiense.jpg" alt="" />
                 <div id='float' className='absolute top-[500px] left-[300px] shadow w-[230px] h-[230px] bg-white p-[25px]'>
                     <div className=' border-[4px] border-dotted h-full'>
                         <p className='text-[72px] font-bold text-yellow-500 flex justify-center items-center'>12</p>
