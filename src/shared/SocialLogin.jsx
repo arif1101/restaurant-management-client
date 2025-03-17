@@ -8,7 +8,6 @@ const SocialLogin = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state || '/';
-    console.log('from google logIn', location)
 
     const handleGoogleSignIn = () => {
         singInWithGoogle()
@@ -16,7 +15,6 @@ const SocialLogin = () => {
                 navigate(from)
             })
             .catch(error => {
-                console.log(error.message)
             })
     }
     

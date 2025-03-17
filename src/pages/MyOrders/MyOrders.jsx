@@ -6,7 +6,7 @@ const MyOrders = () => {
     const [foods, setFoods] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/food-orders?email=${user.email}`)
+        fetch(`https://restaurant-management-server-peach.vercel.app/food-orders?email=${user.email}`)
             .then(res => res.json())
             .then(data => setFoods(data))
             .catch(err => console.error("Error fetching data:", err));

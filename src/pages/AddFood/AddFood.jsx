@@ -17,7 +17,7 @@ const AddFood = () => {
         newFood.price = parseFloat(newFood.price);
         newFood.rating = parseFloat(newFood.rating);
 
-        fetch('http://localhost:5000/foods', {
+        fetch('https://restaurant-management-server-peach.vercel.app/foods', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

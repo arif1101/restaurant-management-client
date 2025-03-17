@@ -17,23 +17,19 @@ const Register = () => {
         const email = form.email.value;
         const photoURL = form.photoURL.value;
         const password = form.password.value;
-        console.log(name,email,photoURL, password);
 
         // password validation: 
         // show password validation error
         createUser(email, password)
             .then(result => {
-                console.log(result.user)
                 updateUserProfile({displayName: name, photoURL: photoURL})
                 .then(()=> {
                     navigate('/')
-                })
+                })       
                 .catch(()=>{
-                    console.log(err)
                 });
             })
             .catch(error => {
-                console.log(error.message)
             })
     }
     
