@@ -10,7 +10,6 @@ const Login = () => {
     const {signInUser} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation()
-    console.log('from Login',location)
     const from = location.state || '/';
 
     const handleSignIn = e => {
@@ -18,17 +17,13 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
 
         signInUser(email, password)
         .then(result => {
             navigate(from)
         })
         .catch(error => {
-            console.log('aaaaaaaaaaaaa');
         })
-
-        
     }
     
     return (

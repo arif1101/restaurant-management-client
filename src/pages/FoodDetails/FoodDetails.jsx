@@ -37,7 +37,7 @@ const FoodDetails = () => {
 
         }
 
-        fetch('http://localhost:5000/food-order', {
+        fetch('https://restaurant-management-server-peach.vercel.app/food-order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -46,29 +46,14 @@ const FoodDetails = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             if(data.insertedId){
                 setOrderData(foodOrder);
                 setIsModalOpen(true)
             }
-            // if (data.insertedId) {
-            //     Swal.fire({
-            //         position: "top-end",
-            //         icon: "success",
-            //         title: "Your work has been saved",
-            //         showConfirmButton: false,
-            //         timer: 1500
-            //     });
-            //     // navigate('/myApplications')
-            // }
         })
         
     }
 
-
-    
-    
-    
     return (
         <div className='flex pt-[100px] gap-[70px]'>
             <img className='w-[523px] h-[468px] rounded-3xl' src={foodImage} alt="" />

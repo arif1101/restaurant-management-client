@@ -4,15 +4,13 @@ import AuthContext from '../context/AuthContext';
 
 const Navbar = () => {
 
-    const {user, signOutUser} = useContext(AuthContext);
+    const {user, signOutUser, loading} = useContext(AuthContext);
 
     const handleSignOut = () => {
         signOutUser()
         .then(() => {
-            console.log('successful sign out')
         })
         .catch(error => {
-            console.log('failed to sign out .stay here. dont leave me alone')
         })
     }
 
@@ -74,7 +72,7 @@ const Navbar = () => {
     );
     
     return (
-        <div className="navbar shadow">
+        <div className="navbar shadow sticky top-0 z-50 bg-white">
         <div className="navbar-start h-[80px]">
             <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -122,7 +120,11 @@ const Navbar = () => {
             <div className="dropdown dropdown-bottom dropdown-end" >
                 {/* <div tabIndex={0} role="button" className="btn  m-1"><img src="https://i.ibb.co.com/vH1ySpZ/ezgif-2-9828453b56.jpg" alt="" /></div> */}
                 {/* <p className='font-bold text-yellow-700'>{user?.displayName}</p> */}
-                <img tabIndex={0} role='button' className={`w-14 h-14 rounded-full border-2 border-yellow-500 ${user ? '':'hidden'}`} src={user?.photoURL} alt="" />
+                {
+                    loading ? ('') : (
+                        <img tabIndex={0} role='button' className={`w-14 h-14 rounded-full border-2 border-yellow-500 ${user ? '':'hidden'}`} src={user?.photoURL} alt="" />
+                    )
+                }
                 <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1000] w-[130px] p-2 shadow">
                     <Link to='/myFoods'><button className="btn w-full">My Foods</button></Link>
                     <Link to='/addFood'><button className="btn w-full">Add food</button></Link>

@@ -11,8 +11,8 @@ const Food = ({food}) => {
             <div className='w-[330px] h-[236px] p-[15px] flex flex-col rounded-tr-3xl rounded-br-3xl bg-white shadow justify-between'>
                 <div className='h-full flex flex-col justify-between pb-[30px]'>
                 <h1 className='text-xl font-semibold w-[160px] truncate '>{foodName}</h1>
-                <p className='text-green-700 font-bold'>{rating}</p>
-                <p className='text-stone-500'>The ordder cost</p>
+                <p className='text-green-700 font-bold'>rating : {rating}</p>
+                <p className='text-stone-500'>The order cost :</p>
                 <p className='text-red-500 font-bold'>{price} $</p>
                 </div>
                 <Link to={`/foods/${_id}`}><p className='btn bg-red-200 text-red-600 font-bold hover:bg-red-200'>ORDER NOW</p></Link>

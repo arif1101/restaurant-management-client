@@ -10,7 +10,7 @@ const MyFoods = () => {
 
     // Fetch user's food list
     useEffect(() => {
-        fetch(`http://localhost:5000/food-list?email=${user.email}`)
+        fetch(`https://restaurant-management-server-peach.vercel.app/food-list?email=${user.email}`)
             .then(res => res.json())
             .then(data => setFoods(data))
             .catch(err => console.error("Error fetching data:", err));
@@ -34,7 +34,7 @@ const MyFoods = () => {
 
     // Submit update request to server
     const handleUpdateSubmit = () => {
-        fetch(`http://localhost:5000/foods/${selectedFood._id}`, {
+        fetch(`https://restaurant-management-server-peach.vercel.app/foods/${selectedFood._id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updatedFood),
